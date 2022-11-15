@@ -1,0 +1,61 @@
+{
+    "name": "java-black",
+    "dockerComposeFile": [
+        "../docker-compose.yml",
+        "../docker-compose-test.yml",
+        "docker-compose.yml"
+    ],
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "remoteEnv": {
+        "TZ": "Asia/Tokyo"
+    },
+    "settings": {
+        "java.jdt.ls.java.home": "/usr/lib/jvm/msopenjdk-current",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "[markdown]": {
+            "files.trimTrailingWhitespace": false
+        }
+    },
+    "extensions": [
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "xyz.local-history",
+        "moshfeu.compare-folders",
+        "janisdd.vscode-edit-csv",
+        "mechatroner.rainbow-csv",
+        "romanpeshkov.vscode-text-tables",
+        "csholmq.excel-to-markdown-table",
+        "yzane.markdown-pdf",
+        "jebbs.plantuml",
+        "hediet.vscode-drawio",
+        "42crunch.vscode-openapi",
+        "vscjava.vscode-java-pack",
+        "richardwillis.vscode-gradle-extension-pack"
+    ],
+    "features": {
+        "docker-from-docker": "20.10",
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "installMaven": "false",
+            "installGradle": "true"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
+        }
+    },
+    "forwardPorts": [
+        8080,
+        13306
+    ],
+    "remoteUser": "vscode"
+}

@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    ports:
+      - 8080:8080
+    working_dir: /workspace
+    volumes:
+      - .:/workspace:delegated
+      - $SSH_AUTH_SOCK:/ssh-agent
+    command: sleep infinity

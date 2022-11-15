@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0.31
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    volumes:
+      - ./etc/iac/db/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 13306:3306

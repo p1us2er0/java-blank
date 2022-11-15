@@ -1,0 +1,7 @@
+# basic
+.history
+
+# java
+.gradle
+bin
+build
